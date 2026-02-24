@@ -1,0 +1,257 @@
+:root {
+    --diet-bg: #f3f3f3;
+    --diet-green: #93db7c;
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --mercedes-bg: #f5f5f5;
+    --mercedes-gray: #888888;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+header {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    align-items: center;
+    height: 80px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+nav a img {
+    height: 40px;
+    width: auto;
+}
+
+.title-frame ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.title-frame ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: opacity 0.3s;
+}
+
+.title-frame ul li a:hover {
+    opacity: 0.6;
+}
+
+.controls-margin .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#language {
+    border: none;
+    background: transparent;
+    font-family: var(--font-main);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    padding: 5px;
+}
+
+.button-icon,
+.account-wrap .button,
+.cart-wrap .button {
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.button-icon:hover,
+.button:hover {
+    transform: scale(1.1);
+}
+
+.icon-svg {
+    stroke: #0a0a0a;
+    stroke-width: 6px;
+    width: 24px;
+    height: 24px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@media (max-width: 850px) {
+    .title-frame {
+        display: none;
+    }
+
+    nav {
+        padding: 0 20px;
+    }
+}
+
+.banner {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%),
+        url('assets/kit.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.banner-content {
+    max-width: 500px;
+    color: #033112;
+}
+
+.banner-content span {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.banner-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.banner-content p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.featured-diet-new_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 60px 8%;
+    background-color: #ffffff;
+}
+
+.featured-diet-new_card {
+    background-color: var(--mercedes-bg);
+    border-radius: 12px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+    min-height: 550px;
+}
+
+.featured-diet-new_card:hover {
+    background-color: #e9e9e9;
+    transform: translateY(-5px);
+}
+
+.featured-diet-new_header-title h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.featured-diet-new_header-title h4 {
+    font-size: 0.85rem;
+    color: var(--mercedes-gray);
+    font-weight: 400;
+    margin-top: 8px;
+    text-transform: none;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.image-container img {
+    max-width: 85%;
+    height: auto;
+    filter: drop-shadow(0 30px 40px rgba(0, 0, 0, 0.12));
+}
+
+.featured-diet-new_footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    background: #ffffff;
+    color: #000;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.button {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #333333;
+}
+
+@media (max-width: 992px) {
+    .featured-diet-new_wrapper {
+        grid-template-columns: 1fr;
+
+    }
+
+    .banner {
+        height: 60vh;
+        padding-left: 5%;
+    }
+}
