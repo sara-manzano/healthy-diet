@@ -1,9 +1,11 @@
 :root {
     --diet-bg: #f3f3f3;
-    --diet-green: #93db7c;
+    --diet-secondary: rgba(227, 233, 228, 0.707);
+    --diet-secondary-font: rgba(64, 117, 50, 0.9);
+    --diet-font: #c8e7c7;
+    --diet-buttons: #748e74;
     --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --mercedes-bg: #f5f5f5;
-    --mercedes-gray: #888888;
+
 }
 
 body {
@@ -14,7 +16,7 @@ body {
 
 header {
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(243, 243, 243, 0.8);
     border-bottom: 1px solid #f0f0f0;
     top: 0;
     z-index: 1000;
@@ -31,7 +33,7 @@ nav {
 }
 
 nav a img {
-    height: 40px;
+    height: 80px;
     width: auto;
 }
 
@@ -45,8 +47,8 @@ nav a img {
 
 .title-frame ul li a {
     text-decoration: none;
-    color: #000;
-    font-size: 13px;
+    color: var(--diet-secondary-font);
+    font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -91,14 +93,15 @@ nav a img {
 
 .button-icon:hover,
 .button:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
 }
 
 .icon-svg {
-    stroke: #0a0a0a;
-    stroke-width: 6px;
-    width: 24px;
-    height: 24px;
+    stroke: var(--diet-secondary-font);
+    stroke-width: 4px;
+    width: 32px;
+    height: 32px;
 }
 
 .visually-hidden {
@@ -137,27 +140,56 @@ nav a img {
 }
 
 .banner-content {
-    max-width: 500px;
-    color: #033112;
+    max-width: 400px;
+    color: var(--diet-font);
 }
 
 .banner-content span {
+    display: inline-block;
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 300;
+    color: var(--diet-bg);
+    margin-bottom: 0.5rem;
 }
 
 .banner-content h1 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: clamp(3.5rem, 2.5vw + 1rem, 4.5rem);
     font-weight: 400;
-    margin: 10px 0;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 10px 0 20px 0;
 }
 
 .banner-content p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 300;
     opacity: 0.9;
+    color: var(--diet-bg);
+    margin-bottom: 2.5rem;
+    max-width: 550px;
+}
+
+.banner-content .button {
+    display: inline-block;
+    background: var(--diet-secondary);
+    color: var(--diet-secondary-font);
+    text-transform: uppercase;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.banner-content .button:hover {
+    background-color: transparent;
+    color: var(--diet-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .featured-diet-new_wrapper {
@@ -165,11 +197,11 @@ nav a img {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     padding: 60px 8%;
-    background-color: #ffffff;
+    background-color: var(--diet-bg);
 }
 
 .featured-diet-new_card {
-    background-color: var(--mercedes-bg);
+    background: var(--diet-secondary);
     border-radius: 12px;
     padding: 50px;
     display: flex;
@@ -180,7 +212,6 @@ nav a img {
 }
 
 .featured-diet-new_card:hover {
-    background-color: #e9e9e9;
     transform: translateY(-5px);
 }
 
@@ -188,11 +219,12 @@ nav a img {
     font-size: 2rem;
     font-weight: 400;
     margin: 0;
+    color: var(--diet-secondary-font);
 }
 
 .featured-diet-new_header-title h4 {
     font-size: 0.85rem;
-    color: var(--mercedes-gray);
+    color: var(--diet-font);
     font-weight: 400;
     margin-top: 8px;
     text-transform: none;
@@ -219,8 +251,8 @@ nav a img {
 }
 
 .link {
-    background: #ffffff;
-    color: #000;
+    background: var(--diet-buttons);
+    color: var(--diet-font);
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 25px;
@@ -230,18 +262,19 @@ nav a img {
 }
 
 .button {
-    background: #000000;
-    color: #ffffff;
+    background: var(--diet-buttons);
     border: none;
+    color: var(--diet-font);
     padding: 12px 28px;
     border-radius: 25px;
     font-size: 0.85rem;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
 }
 
 .button:hover {
-    background: #333333;
+    background: var(--diet-bg);
+    color: var(--diet-font);
 }
 
 @media (max-width: 992px) {
@@ -250,8 +283,465 @@ nav a img {
 
     }
 
-    .banner {
+    .hero {
         height: 60vh;
         padding-left: 5%;
+    }
+}
+
+/* ========== NUEVAS SECCIONES ========== */
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sección de Productos */
+.products-section {
+    padding: 80px 5%;
+    background-color: #ffffff;
+}
+
+.products-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--diet-secondary-font);
+    margin-bottom: 10px;
+}
+
+.products-section .section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: var(--diet-secondary);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    color: var(--diet-secondary-font);
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.product-card .price {
+    font-size: 1.5rem;
+    color: var(--diet-buttons);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-card .description {
+    font-size: 0.9rem;
+    color: #666;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.product-card .button {
+    align-self: center;
+    width: 90%;
+}
+
+/* Sección de Planes */
+.plans-section {
+    padding: 80px 5%;
+    background: linear-gradient(135deg, var(--diet-bg) 0%, rgba(227, 233, 228, 0.5) 100%);
+}
+
+.plans-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--diet-secondary-font);
+    margin-bottom: 10px;
+}
+
+.plans-section .section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.plan-card {
+    background: #ffffff;
+    border: 2px solid var(--diet-secondary);
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan-card:hover {
+    border-color: var(--diet-buttons);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.featured-plan {
+    border: 2px solid var(--diet-buttons);
+    transform: scale(1.05);
+    background: var(--diet-secondary);
+}
+
+.featured-plan:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--diet-buttons);
+    color: var(--diet-font);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.plan-card h3 {
+    color: var(--diet-secondary-font);
+    font-size: 1.5rem;
+    margin: 15px 0 10px 0;
+}
+
+.plan-price {
+    font-size: 2rem;
+    color: var(--diet-buttons);
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 20px 0;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.plan-features li {
+    padding: 10px 0;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+.plan-card .button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Sección de Suscripción */
+.subscription-section {
+    padding: 80px 5%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.subscription-section h2 {
+    font-size: 2.5rem;
+    color: var(--diet-secondary-font);
+    margin-bottom: 10px;
+}
+
+.subscription-section .section-subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.subscription-form {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--diet-secondary);
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--diet-buttons);
+}
+
+.subscription-form .button {
+    align-self: center;
+    padding: 12px 30px;
+}
+
+.form-notice {
+    color: #999;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+/* Sección de Contacto */
+.contact-section {
+    padding: 80px 5%;
+    background: linear-gradient(135deg, var(--diet-bg) 0%, rgba(227, 233, 228, 0.5) 100%);
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--diet-secondary-font);
+    margin-bottom: 10px;
+}
+
+.contact-section .section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-item h4 {
+    color: var(--diet-secondary-font);
+    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+}
+
+.info-item p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form .form-group {
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--diet-secondary);
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--diet-buttons);
+}
+
+.contact-form .button {
+    width: 100%;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    padding: 60px 5% 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    color: var(--diet-buttons);
+    font-size: 1.2rem;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    padding: 8px 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--diet-buttons);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--diet-buttons);
+    border-radius: 50%;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    background-color: #fff;
+    color: var(--diet-buttons);
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #999;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-plan {
+        transform: scale(1);
+    }
+
+    .featured-plan:hover {
+        transform: translateY(-10px);
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .products-section,
+    .plans-section,
+    .subscription-section,
+    .contact-section {
+        padding: 50px 5%;
+    }
+
+    .products-section h2,
+    .plans-section h2,
+    .subscription-section h2,
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .subscription-form {
+        flex-direction: column;
+    }
+
+    .form-group {
+        min-width: 100%;
     }
 }
