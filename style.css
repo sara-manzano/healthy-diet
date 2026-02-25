@@ -5,7 +5,6 @@
     --diet-font: #c8e7c7;
     --diet-buttons: #748e74;
     --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
 }
 
 body {
@@ -289,15 +288,12 @@ nav a img {
     }
 }
 
-/* ========== NUEVAS SECCIONES ========== */
-
 .section-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Sección de Productos */
 .products-section {
     padding: 80px 5%;
     background-color: #ffffff;
@@ -372,7 +368,6 @@ nav a img {
     width: 90%;
 }
 
-/* Sección de Planes */
 .plans-section {
     padding: 80px 5%;
     background: linear-gradient(135deg, var(--diet-bg) 0%, rgba(227, 233, 228, 0.5) 100%);
@@ -476,11 +471,12 @@ nav a img {
     width: 100%;
 }
 
-/* Sección de Suscripción */
 .subscription-section {
-    padding: 80px 5%;
+    display: flex;
     background-color: #ffffff;
+    justify-content: center;
     text-align: center;
+    height: auto;
 }
 
 .subscription-section h2 {
@@ -496,39 +492,46 @@ nav a img {
 }
 
 .subscription-form {
-    max-width: 600px;
-    margin: 0 auto 20px;
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: flex-end;
 }
 
 .form-group {
-    flex: 1;
-    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
 }
 
 .form-group input,
 .form-group select {
-    width: 100%;
     padding: 12px 15px;
     border: 2px solid var(--diet-secondary);
-    border-radius: 8px;
+    border-radius: 10px;
     font-family: var(--font-main);
-    font-size: 1rem;
+    font-size: 16px;
+    min-width: 250px;
     transition: border-color 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: var(--diet-buttons);
+.form-group label {
+    font-size: 14px;
+    color: var(--diet-secondary-font);
+    font-weight: 500;
 }
 
 .subscription-form .button {
-    align-self: center;
-    padding: 12px 30px;
+    background: var(--diet-buttons);
+    color: var(--diet-bg);
+    padding: 12px 35px;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .form-notice {
@@ -537,7 +540,6 @@ nav a img {
     margin-top: 15px;
 }
 
-/* Sección de Contacto */
 .contact-section {
     padding: 80px 5%;
     background: linear-gradient(135deg, var(--diet-bg) 0%, rgba(227, 233, 228, 0.5) 100%);
@@ -614,7 +616,6 @@ nav a img {
     width: 100%;
 }
 
-/* Footer */
 .main-footer {
     background-color: #2a2a2a;
     color: #ffffff;
@@ -700,7 +701,6 @@ nav a img {
     margin: 0;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .products-grid {
         grid-template-columns: 1fr;

@@ -142,7 +142,6 @@
       </article>
     </section>
 
-    <!-- Sección de Productos -->
     <section id="recetas" class="products-section">
       <div class="section-container">
         <h2>Nuestros Productos</h2>
@@ -184,7 +183,6 @@
       </div>
     </section>
 
-    <!-- Sección de Planes de Dietas -->
     <section id="planes" class="plans-section">
       <div class="section-container">
         <h2>Nuestros Planes de Dieta</h2>
@@ -231,7 +229,6 @@
       </div>
     </section>
 
-    <!-- Sección de Suscripción -->
     <section id="suscripcion" class="subscription-section">
       <div class="section-container">
         <h2>Suscríbete a Nuestro Newsletter</h2>
@@ -242,8 +239,9 @@
             <input type="email" placeholder="Tu correo electrónico" required />
           </div>
           <div class="form-group">
-            <select required>
-              <option value="">Selecciona tu interés</option>
+            <label for="interes-select">Elige tu interés:</label>
+            <select id="interes-select" aria-label="Seleccionar interés">
+              <option value="" disabled selected hidden>Selecciona</option>
               <option value="recetas">Recetas</option>
               <option value="consejos">Consejos de Salud</option>
               <option value="ofertas">Ofertas Especiales</option>
@@ -255,7 +253,6 @@
       </div>
     </section>
 
-    <!-- Sección de Contacto -->
     <section id="contacto" class="contact-section">
       <div class="section-container">
         <h2>Contacto</h2>
@@ -301,7 +298,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="main-footer">
     <div class="footer-container">
       <div class="footer-section">
@@ -324,7 +320,6 @@
         <div class="social-links">
           <a href="#" aria-label="Facebook">f</a>
           <a href="#" aria-label="Instagram">📷</a>
-          <a href="#" aria-label="Twitter">𝕏</a>
           <a href="#" aria-label="TikTok">♪</a>
         </div>
       </div>
