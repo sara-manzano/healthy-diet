@@ -32,8 +32,8 @@ header {
     width: 100%;
     background-color: rgba(243, 243, 243, 0.8);
     border-bottom: 1px solid #f0f0f0;
-    backdrop-filter: blur(12px); 
     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
     top: 0;
     z-index: 1000;
@@ -790,9 +790,7 @@ a:focus {
     justify-content: center;
     gap: 70px;
     width: 100%;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    overflow-x: auto;
+    flex-wrap: wrap;
 }
 
 .footer-section {
@@ -801,7 +799,8 @@ a:focus {
     align-items: center;
     text-align: center;
     flex-shrink: 0;
-    min-width: fit-content;
+    flex: 1;
+    min-width: 200px;
 }
 
 .footer-section h3 {
@@ -881,11 +880,6 @@ a:focus {
 .footer-bottom p {
     margin: 0;
     letter-spacing: 0.3px;
-}
-
-.footer-legal a:focus {
-    outline: 2px solid var(--diet-buttons);
-    outline-offset: 2px;
 }
 
 .footer-legal a:focus {
@@ -1414,7 +1408,6 @@ a:focus {
         padding: 10px 20px;
         font-size: 0.8rem;
     }
-}
 
     .subscription-form .button {
         margin: 20px auto 0 auto;
@@ -1449,11 +1442,9 @@ a:focus {
     }
 
     .footer-main {
-        gap: 50px;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        padding: 0 10px;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .footer-section h3 {
@@ -1474,7 +1465,7 @@ a:focus {
         height: 32px;
         font-size: 0.9rem;
     }
-
+}
 
 @supports (padding: env(safe-area-inset-top)) {
     header {
