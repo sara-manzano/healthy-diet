@@ -489,26 +489,6 @@
       <p>&copy; 2026 Healthy Diet. Todos los derechos reservados.</p>
     </div>
   </footer>
-
-  <script>
-    // Funcionalidad para seleccionar planes
-    document.querySelectorAll('.plan-card .button[data-plan]').forEach(button => {
-      button.addEventListener('click', function(e) {
-        e.preventDefault();
-        const planName = this.getAttribute('data-plan');
-        const price = this.getAttribute('data-price');
-        const planTitles = {
-          'basico': 'Plan Básico',
-          'pro': 'Plan Pro',
-          'premium': 'Plan Premium'
-        };
-        
-        const message = `¡Haz seleccionado el ${planTitles[planName]} por ${price}€/mes!\n\nProcedería a la página de checkout en una aplicación real.\n\nCaracterísticas incluidas:${this.closest('.plan-card').querySelector('.plan-features').innerText.replace(/\n/g, '\n')}`;
-        
-        alert(message);
-      });
-    });
-  </script>
 </body>
 
 </html>
