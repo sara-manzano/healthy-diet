@@ -40,64 +40,81 @@
   </header>
 
   <main>
-    <section class="recipes-section">
+    <section class="checkout-section">
       <div class="section-container">
         <a href="../../index.html#planes" class="back-link">← Volver a planes</a>
         
-        <div>
-          <h1>Plan Pro ⭐</h1>
-          
-          <div>
-            <h2>59.99€</h2>
-            <p>por mes</p>
-            <p>Más Popular</p>
-            
-            <h3>Qué incluye:</h3>
-            <ul>
-              <li>✓ 15 comidas semanales seleccionadas</li>
-              <li>✓ Acceso completo a todas las recetas</li>
-              <li>✓ Soporte 24/7 por correo y chat</li>
-              <li>✓ Consulta personalizada con nutricionista (1 mes)</li>
-              <li>✗ Entrega a domicilio</li>
-            </ul>
-          </div>
-
-          <form>
-            <div>
-              <label for="name">Nombre completo:</label>
-              <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+        <div class="checkout-wrapper">
+          <aside class="checkout-summary">
+            <div class="plan-card-summary featured">
+              <span class="featured-badge">⭐ Más Popular</span>
+              <h2>Plan Pro</h2>
+              <div class="price-tag">59.99€<span class="period">/mes</span></div>
+              
+              <h3>Incluido en tu plan:</h3>
+              <ul class="features-list">
+                <li class="included">✓ 15 comidas semanales</li>
+                <li class="included">✓ Todas las recetas</li>
+                <li class="included">✓ Soporte 24/7</li>
+                <li class="included">✓ Consulta nutricionista</li>
+                <li class="excluded">✗ Entrega a domicilio</li>
+              </ul>
             </div>
+          </aside>
 
-            <div>
-              <label for="email">Correo electrónico:</label>
-              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          <main class="checkout-form-wrapper">
+            <div class="checkout-form-container">
+              <h2>Detalles de la suscripción</h2>
+              
+              <form class="checkout-form">
+                <div class="form-group">
+                  <label for="name">Nombre completo</label>
+                  <input type="text" id="name" name="name" placeholder="Ej: Juan García" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Correo electrónico</label>
+                  <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Teléfono</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+34 6XX XXX XXX" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="preferences">Preferencias dietéticas</label>
+                  <select id="preferences" name="preferences" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="omnivoro">Omnívoro</option>
+                    <option value="vegetariano">Vegetariano</option>
+                    <option value="vegano">Vegano</option>
+                    <option value="keto">Keto</option>
+                    <option value="sin-gluten">Sin Gluten</option>
+                  </select>
+                </div>
+
+                <div class="checkout-summary-row">
+                  <span>Plan Pro</span>
+                  <span class="price">59.99€</span>
+                </div>
+                <div class="checkout-summary-row total">
+                  <span>Total/mes</span>
+                  <span class="price">59.99€</span>
+                </div>
+
+                <button type="submit" class="button button-primary button-large">Confirmar Suscripción</button>
+                
+                <p class="form-disclaimer">
+                  Esta es una demostración. Los datos no serán guardados.
+                </p>
+              </form>
             </div>
-
-            <div>
-              <label for="phone">Teléfono:</label>
-              <input type="tel" id="phone" name="phone" placeholder="+34 6XX XXX XXX" required>
-            </div>
-
-            <div>
-              <label for="preferences">Preferencias dietéticas:</label>
-              <select id="preferences" name="preferences">
-                <option value="">Selecciona una opción</option>
-                <option value="omnivoro">Omnívoro</option>
-                <option value="vegetariano">Vegetariano</option>
-                <option value="vegano">Vegano</option>
-                <option value="keto">Keto</option>
-                <option value="sin-gluten">Sin Gluten</option>
-              </select>
-            </div>
-
-            <div>
-              <p>
-                <strong>Resumen:</strong> Plan Pro - 59.99€/mes
-              </p>
-            </div>
-
-            <button type="submit" class="button">Confirmar y Pagar</button>
-          </form>
+          </main>
+        </div>
+      </div>
+    </section>
+  </main>
 
           <p>
             Esta es una demostración. Los datos no serán guardados.

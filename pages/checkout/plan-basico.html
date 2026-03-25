@@ -40,55 +40,64 @@
   </header>
 
   <main>
-    <section class="recipes-section">
+    <section class="checkout-section">
       <div class="section-container">
         <a href="../../index.html#planes" class="back-link">← Volver a planes</a>
         
-        <div>
-          <h1>Plan Básico</h1>
-          
-          <div>
-            <h2>29.99€</h2>
-            <p>por mes</p>
-            
-            <h3>Qué incluye:</h3>
-            <ul>
-              <li>✓ 5 comidas semanales seleccionadas</li>
-              <li>✓ Acceso completo a todas las recetas</li>
-              <li>✓ Soporte por correo electrónico</li>
-              <li>✗ Consulta personalizada con nutricionista</li>
-              <li>✗ Entrega a domicilio</li>
-            </ul>
-          </div>
-
-          <form>
-            <div>
-              <label for="name">Nombre completo:</label>
-              <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+        <div class="checkout-wrapper">
+          <aside class="checkout-summary">
+            <div class="plan-card-summary">
+              <h2>Plan Básico</h2>
+              <div class="price-tag">29.99€<span class="period">/mes</span></div>
+              
+              <h3>Incluido en tu plan:</h3>
+              <ul class="features-list">
+                <li class="included">✓ 5 comidas semanales</li>
+                <li class="included">✓ Acceso a recetas</li>
+                <li class="included">✓ Soporte por email</li>
+                <li class="excluded">✗ Consulta nutricionista</li>
+                <li class="excluded">✗ Entrega a domicilio</li>
+              </ul>
             </div>
+          </aside>
 
-            <div>
-              <label for="email">Correo electrónico:</label>
-              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          <main class="checkout-form-wrapper">
+            <div class="checkout-form-container">
+              <h2>Detalles de la suscripción</h2>
+              
+              <form class="checkout-form">
+                <div class="form-group">
+                  <label for="name">Nombre completo</label>
+                  <input type="text" id="name" name="name" placeholder="Ej: Juan García" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Correo electrónico</label>
+                  <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Teléfono</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+34 6XX XXX XXX" required>
+                </div>
+
+                <div class="checkout-summary-row">
+                  <span>Plan Básico</span>
+                  <span class="price">29.99€</span>
+                </div>
+                <div class="checkout-summary-row total">
+                  <span>Total/mes</span>
+                  <span class="price">29.99€</span>
+                </div>
+
+                <button type="submit" class="button button-primary button-large">Confirmar Suscripción</button>
+                
+                <p class="form-disclaimer">
+                  Esta es una demostración. Los datos no serán guardados.
+                </p>
+              </form>
             </div>
-
-            <div>
-              <label for="phone">Teléfono:</label>
-              <input type="tel" id="phone" name="phone" placeholder="+34 6XX XXX XXX" required>
-            </div>
-
-            <div>
-              <p>
-                <strong>Resumen:</strong> Plan Básico - 29.99€/mes
-              </p>
-            </div>
-
-            <button type="submit" class="button">Confirmar y Pagar</button>
-          </form>
-
-          <p>
-            Esta es una demostración. Los datos no serán guardados.
-          </p>
+          </main>
         </div>
       </div>
     </section>

@@ -1,9 +1,11 @@
 :root {
-    --diet-bg: #f3f3f3;
-    --diet-secondary: rgba(227, 233, 228, 0.707);
-    --diet-secondary-font: rgba(64, 117, 50, 0.9);
+    --diet-bg: #f8faf7;
+    --diet-secondary: rgba(207, 226, 210, 0.85);
+    --diet-secondary-font: #2d5a1a;
     --diet-font: #0f100f;
-    --diet-buttons: #748e74;
+    --diet-buttons: #5a9552;
+    --diet-accent: #8bc34a;
+    --diet-accent-light: #d5f4e6;
     --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --transition-fast: all 0.2s ease;
     --transition-mid: all 0.3s ease;
@@ -562,6 +564,16 @@ a:focus {
     transform: scale(1.05) translateY(-10px);
 }
 
+.featured-plan .button {
+    background: linear-gradient(135deg, #2d5a1a 0%, var(--diet-accent) 100%);
+    box-shadow: 0 6px 20px rgba(90, 149, 82, 0.35);
+}
+
+.featured-plan .button:hover {
+    background: linear-gradient(135deg, var(--diet-accent) 0%, #2d5a1a 100%);
+    box-shadow: 0 10px 30px rgba(90, 149, 82, 0.5);
+}
+
 .badge {
     position: absolute;
     top: -15px;
@@ -608,6 +620,24 @@ a:focus {
 .plan-card .button {
     margin-top: 20px;
     width: 100%;
+    background: linear-gradient(135deg, var(--diet-buttons) 0%, #4a7a42 100%);
+    color: #ffffff;
+    padding: 14px 30px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(90, 149, 82, 0.3);
+}
+
+.plan-card .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(90, 149, 82, 0.45);
+    background: linear-gradient(135deg, #4a7a42 0%, var(--diet-buttons) 100%);
 }
 
 .subscription-section {
@@ -998,7 +1028,6 @@ a:focus {
     position: relative;
 }
 
-/* NUTRITION PAGE STYLES */
 .nutrition-page {
     padding: 60px 5%;
     background: linear-gradient(135deg, #ffffff 0%, #f8faf7 100%);
@@ -1729,6 +1758,297 @@ a:focus {
     .banner-content .button,
     .controls-margin {
         display: none;
+    }
+}
+
+/* ===== CHECKOUT SECTION ===== */
+
+.checkout-section {
+    padding: 60px 5%;
+    background: linear-gradient(135deg, #ffffff 0%, #f8faf7 100%);
+    min-height: 100vh;
+}
+
+.checkout-wrapper {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 30px auto 0;
+}
+
+.checkout-summary {
+    position: sticky;
+    top: 60px;
+    height: fit-content;
+}
+
+.plan-card-summary {
+    background: #ffffff;
+    border: 2px solid #e8eae8;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.plan-card-summary.featured {
+    border-color: var(--diet-buttons);
+    background: linear-gradient(135deg, #f9fbfa 0%, var(--diet-secondary) 100%);
+}
+
+.plan-card-summary.premium {
+    border-color: #d4a574;
+    background: linear-gradient(135deg, #fff9f5 0%, #fffbf0 100%);
+}
+
+.featured-badge,
+.premium-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 6px 12px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.featured-badge {
+    background: linear-gradient(135deg, var(--diet-buttons) 0%, #5a7a5a 100%);
+    color: white;
+}
+
+.premium-badge {
+    background: linear-gradient(135deg, #d4a574 0%, #c9955f 100%);
+    color: white;
+}
+
+.plan-card-summary h2 {
+    font-size: 1.8rem;
+    color: var(--diet-secondary-font);
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+.price-tag {
+    font-size: 2.5rem;
+    color: var(--diet-buttons);
+    font-weight: 700;
+    margin: 15px 0;
+    letter-spacing: -0.5px;
+}
+
+.price-tag .period {
+    font-size: 1rem;
+    color: #999;
+    font-weight: 500;
+}
+
+.plan-card-summary h3 {
+    font-size: 1rem;
+    color: #666;
+    margin: 20px 0 15px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.features-list li {
+    padding: 10px 0;
+    color: #555;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 1.5;
+}
+
+.features-list li:last-child {
+    border-bottom: none;
+}
+
+.features-list li.included {
+    color: #2d5a1a;
+    font-weight: 500;
+}
+
+.features-list li.excluded {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.checkout-form-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.checkout-form-container {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+.checkout-form-container h2 {
+    font-size: 1.6rem;
+    color: var(--diet-secondary-font);
+    margin: 0 0 30px 0;
+    font-weight: 600;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.checkout-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkout-form label {
+    font-size: 0.9rem;
+    color: var(--diet-secondary-font);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.checkout-form input,
+.checkout-form select,
+.checkout-form textarea {
+    padding: 12px 16px;
+    border: 2px solid #e8eae8;
+    border-radius: 10px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.checkout-form input:focus,
+.checkout-form select:focus,
+.checkout-form textarea:focus {
+    outline: none;
+    border-color: var(--diet-buttons);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(116, 142, 116, 0.1);
+}
+
+.checkout-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.checkout-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e8eae8;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.checkout-summary-row.total {
+    margin-top: 8px;
+    margin-bottom: 25px;
+    padding-top: 12px;
+    padding-bottom: 0;
+    border-bottom: none;
+    border-top: 2px solid #e8eae8;
+    font-weight: 600;
+    color: var(--diet-secondary-font);
+    font-size: 1.1rem;
+}
+
+.checkout-summary-row .price {
+    font-weight: 600;
+    color: var(--diet-buttons);
+    font-size: 1rem;
+}
+
+.checkout-summary-row.total .price {
+    font-size: 1.3rem;
+    color: var(--diet-secondary-font);
+}
+
+.button-primary {
+    background: linear-gradient(135deg, var(--diet-buttons) 0%, #4a7a42 100%);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 14px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(90, 149, 82, 0.3);
+}
+
+.button-primary:hover {
+    background: linear-gradient(135deg, #4a7a42 0%, var(--diet-buttons) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(90, 149, 82, 0.45);
+}
+
+.button-large {
+    padding: 16px 30px;
+    font-size: 1rem;
+}
+
+.form-disclaimer {
+    font-size: 0.85rem;
+    color: #999;
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    .checkout-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .checkout-summary {
+        position: static;
+    }
+
+    .plan-card-summary {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .checkout-section {
+        padding: 40px 20px;
+    }
+
+    .checkout-form-container {
+        padding: 30px 20px;
+    }
+
+    .checkout-form-container h2 {
+        font-size: 1.4rem;
+    }
+
+    .plan-card-summary h2 {
+        font-size: 1.5rem;
+    }
+
+    .price-tag {
+        font-size: 2.2rem;
     }
 }
 

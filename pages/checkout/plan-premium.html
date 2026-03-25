@@ -40,81 +40,87 @@
   </header>
 
   <main>
-    <section class="recipes-section">
+    <section class="checkout-section">
       <div class="section-container">
         <a href="../../index.html#planes" class="back-link">← Volver a planes</a>
         
-        <div>
-          <h1>Plan Premium 👑</h1>
-          
-          <div>
-            <h2>99.99€</h2>
-            <p>por mes</p>
-            
-            <h3>Qué incluye:</h3>
-            <ul>
-              <li>✓ Comidas ilimitadas - Elige la que quieras</li>
-              <li>✓ Nutricionista dedicado</li>
-              <li>✓ Seguimiento personalizado quincenal</li>
-              <li>✓ Entrega a domicilio GRATIS (Todo el mes)</li>
-              <li>✓ Soporte prioritario 24/7</li>
-              <li>✓ Plan personalizado según objetivos</li>
-            </ul>
-          </div>
-
-          <form>
-            <div>
-              <label for="name">Nombre completo:</label>
-              <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+        <div class="checkout-wrapper">
+          <aside class="checkout-summary">
+            <div class="plan-card-summary premium">
+              <span class="premium-badge">👑 Premium</span>
+              <h2>Plan Premium</h2>
+              <div class="price-tag">99.99€<span class="period">/mes</span></div>
+              
+              <h3>Incluido en tu plan:</h3>
+              <ul class="features-list">
+                <li class="included">✓ Comidas ilimitadas</li>
+                <li class="included">✓ Nutricionista dedicado</li>
+                <li class="included">✓ Seguimiento quincenal</li>
+                <li class="included">✓ Entrega GRATIS</li>
+                <li class="included">✓ Soporte prioritario 24/7</li>
+              </ul>
             </div>
+          </aside>
 
-            <div>
-              <label for="email">Correo electrónico:</label>
-              <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          <main class="checkout-form-wrapper">
+            <div class="checkout-form-container">
+              <h2>Detalles de la suscripción</h2>
+              
+              <form class="checkout-form">
+                <div class="form-group">
+                  <label for="name">Nombre completo</label>
+                  <input type="text" id="name" name="name" placeholder="Ej: Juan García" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Correo electrónico</label>
+                  <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Teléfono</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+34 6XX XXX XXX" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="address">Dirección de entrega</label>
+                  <input type="text" id="address" name="address" placeholder="Calle, número y localidad" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="preferences">Preferencias dietéticas</label>
+                  <select id="preferences" name="preferences" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="omnivoro">Omnívoro</option>
+                    <option value="vegetariano">Vegetariano</option>
+                    <option value="vegano">Vegano</option>
+                    <option value="keto">Keto</option>
+                    <option value="sin-gluten">Sin Gluten</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="objectives">Tus objetivos</label>
+                  <textarea id="objectives" name="objectives" placeholder="Ej: Perder 5kg, Ganar músculo, Mejorar hábitos..." rows="3"></textarea>
+                </div>
+
+                <div class="checkout-summary-row">
+                  <span>Plan Premium</span>
+                  <span class="price">99.99€</span>
+                </div>
+                <div class="checkout-summary-row total">
+                  <span>Total/mes</span>
+                  <span class="price">99.99€</span>
+                </div>
+
+                <button type="submit" class="button button-primary button-large">Confirmar Suscripción</button>
+                
+                <p class="form-disclaimer">
+                  Esta es una demostración. Los datos no serán guardados.
+                </p>
+              </form>
             </div>
-
-            <div>
-              <label for="phone">Teléfono:</label>
-              <input type="tel" id="phone" name="phone" placeholder="+34 6XX XXX XXX" required>
-            </div>
-
-            <div>
-              <label for="address">Dirección de entrega:</label>
-              <input type="text" id="address" name="address" placeholder="Calle y número" required>
-            </div>
-
-            <div>
-              <label for="preferences">Preferencias dietéticas:</label>
-              <select id="preferences" name="preferences" required>
-                <option value="">Selecciona una opción</option>
-                <option value="omnivoro">Omnívoro</option>
-                <option value="vegetariano">Vegetariano</option>
-                <option value="vegano">Vegano</option>
-                <option value="keto">Keto</option>
-                <option value="sin-gluten">Sin Gluten</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="objectives">Tus objetivos:</label>
-              <textarea id="objectives" name="objectives" placeholder="Ej: Perder 5kg, Ganar músculo, Mejorar dieta..."></textarea>
-            </div>
-
-            <div>
-              <p>
-                <strong>Resumen:</strong> Plan Premium - 99.99€/mes
-              </p>
-              <p>
-                Incluye entrega a domicilio (Primer mes gratis)
-              </p>
-            </div>
-
-            <button type="submit" class="button">Confirmar y Pagar</button>
-          </form>
-
-          <p>
-            Esta es una demostración. Los datos no serán guardados.
-          </p>
+          </main>
         </div>
       </div>
     </section>
