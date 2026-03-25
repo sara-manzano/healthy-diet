@@ -998,6 +998,242 @@ a:focus {
     position: relative;
 }
 
+/* NUTRITION PAGE STYLES */
+.nutrition-page {
+    padding: 60px 5%;
+    background: linear-gradient(135deg, #ffffff 0%, #f8faf7 100%);
+}
+
+.nutrition-hero-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.nutrition-hero-header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #407532;
+    margin: 0 0 10px 0;
+    background: linear-gradient(135deg, #407532 0%, #5a9552 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nutrition-hero-header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0;
+}
+
+.nutrition-intro {
+    background: linear-gradient(135deg, #e3e9e4 0%, #f0f4f1 100%);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 50px;
+    border-left: 5px solid var(--diet-buttons);
+    box-shadow: 0 8px 20px rgba(116, 142, 116, 0.1);
+}
+
+.nutrition-intro h2 {
+    color: #407532;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.nutrition-intro p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+}
+
+.nutrition-section-title {
+    font-size: 2rem;
+    color: #407532;
+    border-bottom: 3px solid var(--diet-buttons);
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+.nutrition-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.nutrition-card {
+    background: #ffffff;
+    border: 2px solid #e8eae8;
+    border-radius: 16px;
+    padding: 30px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.nutrition-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--diet-buttons);
+    box-shadow: 0 20px 40px rgba(116, 142, 116, 0.2);
+}
+
+.nutrition-card-title {
+    font-size: 1.4rem;
+    color: #407532;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nutrition-rating {
+    display: inline-block;
+    background: linear-gradient(135deg, #fffbea 0%, #fff8e1 100%);
+    color: #856404;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border: 1px solid #ffe8a8;
+}
+
+.nutrition-rating-stars {
+    color: #ffc107;
+}
+
+.nutrition-table-wrapper {
+    margin-bottom: 25px;
+}
+
+.nutrition-table {
+    width: 100%;
+    font-size: 0.95rem;
+    border-collapse: collapse;
+}
+
+.nutrition-table tr {
+    border-bottom: 1px solid #e8eae8;
+    transition: all 0.3s ease;
+}
+
+.nutrition-table tr:hover {
+    background-color: rgba(116, 142, 116, 0.05);
+}
+
+.nutrition-table td {
+    padding: 12px;
+}
+
+.nutrition-table td:first-child {
+    font-weight: 600;
+    color: #407532;
+    width: 60%;
+}
+
+.nutrition-table td:last-child {
+    text-align: right;
+    color: #666;
+    font-weight: 500;
+}
+
+.nutrition-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.nutrition-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #e3e9e4 0%, #f0f4f1 100%);
+    color: #407532;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--diet-buttons);
+}
+
+.nutrition-info-section {
+    background: linear-gradient(135deg, #f9fbfa 0%, #f3f7f5 100%);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 50px 0;
+    border-left: 4px solid var(--diet-buttons);
+}
+
+.nutrition-info-section h3 {
+    color: #407532;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.nutrition-info-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nutrition-info-section li {
+    padding: 12px 0;
+    color: #666;
+    line-height: 1.6;
+    border-bottom: 1px solid #e8eae8;
+    font-size: 0.95rem;
+}
+
+.nutrition-info-section li:last-child {
+    border-bottom: none;
+}
+
+.nutrition-info-section strong {
+    color: #407532;
+    font-weight: 600;
+}
+
+.nutrition-cta-button {
+    display: inline-block;
+    background: var(--diet-buttons);
+    color: white;
+    padding: 14px 36px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    border: 2px solid var(--diet-buttons);
+}
+
+.nutrition-cta-button:hover {
+    background: transparent;
+    color: var(--diet-buttons);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(116, 142, 116, 0.2);
+}
+
+@media (max-width: 850px) {
+    .nutrition-hero-header h1 {
+        font-size: 2rem;
+    }
+
+    .nutrition-products {
+        grid-template-columns: 1fr;
+    }
+
+    .nutrition-intro {
+        padding: 25px;
+    }
+
+    .nutrition-section-title {
+        font-size: 1.5rem;
+    }
+}
+
 .recipe-image img {
     width: 100%;
     height: 100%;
